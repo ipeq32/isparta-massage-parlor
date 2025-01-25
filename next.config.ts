@@ -3,17 +3,25 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  unoptimized: true,
   images: {
-    domains: ["www.pienspavemasajsalonu.com"],
-    localPatterns: [
+  //   localPatterns: [
+  //     {
+  //       pathname: "/assets/**",
+  //       search: "",
+  //     },
+  //     {
+  //       pathname: "/**",
+  //       search: "",
+  //     },
+
+  //   ],
+    remotePatterns: [
       {
-        pathname: "/assets/**",
-        search: "",
-      },
-      {
-        pathname: "/images/**",
-        search: "",
+        protocol: 'https',
+        hostname: 'www.pienspavemasajsalonu.com',
+        port: '',
+        pathname: '/wp-content/uploads/**',
+        search: '',
       },
     ],
   },
