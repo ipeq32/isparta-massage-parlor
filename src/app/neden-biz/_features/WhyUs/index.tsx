@@ -35,9 +35,14 @@ const WhyUsFeature = () => {
           className="object-cover opacity-60 aspect-video"
         />
         <figcaption className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-          <h1 className="text-6xl font-bold text-center text-white">
-            Hakkımızda
-          </h1>
+          <motion.h1
+            className="text-6xl font-bold text-center text-white"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            Neden Biz?
+          </motion.h1>
         </figcaption>
       </figure>
       <motion.div
