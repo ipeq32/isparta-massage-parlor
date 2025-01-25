@@ -7,6 +7,13 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: ".5rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {},
   },
   plugins: [],
