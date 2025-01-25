@@ -1,4 +1,4 @@
-import WhyUsFeature from "./features/WhyUs";
+import WhyUsFeature from "./_features/WhyUs";
 
 const page = () => {
   return <WhyUsFeature />;
