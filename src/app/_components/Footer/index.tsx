@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const FooterComponent = () => {
   return (
-    <footer className="container pt-16">
-      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="pt-16 bg-gray-100 border-t border-gray-200">
+      <div className="container grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <Link
             href="/"
