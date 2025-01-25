@@ -3,8 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const NavbarComponent = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="flex items-center p-4 h-32 bg-gray-800 text-white sticky top-0 z-10">
       <div className="container flex justify-between items-center">
@@ -19,14 +23,42 @@ const NavbarComponent = () => {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="/hakkimizda">Hakkımızda</Link>
-          <Link href="/iletisim">İletişim</Link>
-          <Link href="/neden-biz">Neden Biz?</Link>
-          <Link href="/galeri">Galeri</Link>
+          <Link
+            href="/hakkimizda"
+            className={cn("hover:text-yellow-500", {
+              "text-yellow-500": pathname === "/hakkimizda",
+            })}
+          >
+            Hakkımızda
+          </Link>
+          <Link
+            href="/iletisim"
+            className={cn("hover:text-yellow-500", {
+              "text-yellow-500": pathname === "/iletisim",
+            })}
+          >
+            İletişim
+          </Link>
+          <Link
+            href="/neden-biz"
+            className={cn("hover:text-yellow-500", {
+              "text-yellow-500": pathname === "/neden-biz",
+            })}
+          >
+            Neden Biz
+          </Link>
+          <Link
+            href="/galeri"
+            className={cn("hover:text-yellow-500", {
+              "text-yellow-500": pathname === "/galeri",
+            })}
+          >
+            Galeri
+          </Link>
         </div>
         <div>
           <Link href="/randevu-al">
-            <button className="flex justify-between items-center gap-3 text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 transition-all duration-300 ease-linear">
+            <button className="flex justify-between items-center gap-3 text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 hover:text-green-500 transition-all duration-300 ease-linear">
               <Icon
                 icon="logos:whatsapp-icon"
                 className="w-6 h-6 inline-block"
