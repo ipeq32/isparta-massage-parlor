@@ -19,7 +19,7 @@ const NavbarComponent = () => {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="/hakkimiz">Hakkımızda</Link>
+          <Link href="/hakkimizda">Hakkımızda</Link>
           <Link href="/iletisim">İletişim</Link>
           <Link href="/neden-biz">Neden Biz?</Link>
           <Link href="/galeri">Galeri</Link>
