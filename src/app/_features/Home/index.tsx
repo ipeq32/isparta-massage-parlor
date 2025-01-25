@@ -9,7 +9,7 @@ const HomeFeature = () => {
       <div className="relative bg-slate-600">
         <Image
           className="object-cover w-[1920px] h-screen -mt-32"
-          src="/assets/home.jpg"
+          src="/images/home.jpg"
           alt="Next.js logo"
           width={1920}
           height={1080}

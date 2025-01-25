@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const FooterComponent = () => {
   return (
-    <footer className="pt-16 bg-gray-100 border-t border-gray-200">
+    <footer className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="container grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <Link
@@ -14,10 +14,10 @@ const FooterComponent = () => {
             <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
-              stroke-linejoin="round"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
               stroke="currentColor"
               fill="none"
             >
