@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const HomeFeature = () => {
   return (
-    <div className="container">
-      <div className="relative">
-        {/* <Image src={home} alt="Home Feature" className="rounded-lg" /> */}
+    <div className="mx-auto w-full bg-slate-400">
+      <div className="relative bg-slate-600">
         <Image
-          src="/images/home.jpg"
-          alt="Home Feature"
-          className="container mx-auto"
+          className="object-cover w-[1920px] h-screen -mt-32"
+          src="/assets/home.jpg"
+          alt="Next.js logo"
           width={1920}
           height={1080}
+          priority
         />
-        <div className="absolute inset-0 bg-gray-800"></div>
+        {/* <div className="absolute inset-0 bg-gray-800"></div> */}
       </div>
     </div>
   );

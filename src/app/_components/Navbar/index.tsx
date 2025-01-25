@@ -10,7 +10,7 @@ const NavbarComponent = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center p-4 h-32 bg-gray-800 text-white sticky top-0 z-10">
+    <nav className="flex items-center p-4 h-32 text-white sticky bg-white/30 backdrop-blur-sm top-0 z-10">
       <div className="container flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
