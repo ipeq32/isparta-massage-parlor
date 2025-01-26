@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HomeFeature from "./_features/Home";
 
 export default function Home() {
