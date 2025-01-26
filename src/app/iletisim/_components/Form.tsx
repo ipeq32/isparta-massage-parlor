@@ -31,7 +31,7 @@ const FormComponent = () => {
       default:
         break;
     }
-    const phoneNumber = "905416064488"; // 905302411232
+    const phoneNumber = "905302411232";
     const message = `Merhaba, ben ${formDetails.name.toUpperCase()}.\nSize websitenizdeki iletişim Formu üzerinden size ulaşıyorum.\n\nİletişim bilgilerim:\nE-posta: ${formDetails.email}\n\nMesaj: ${formDetails.message}`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
