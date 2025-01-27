@@ -5,24 +5,54 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 const NavbarComponent = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 150.0);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex items-center p-4 h-32 text-white sticky bg-white/30 backdrop-blur-sm top-0 z-10">
+    <nav className={cn("flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out", {
+      "bg-gray-900/80": isScrolled,
+      "h-24": isScrolled,
+      "shadow-xl": isScrolled,
+      "bg-gray-800": pathname === "/" && isScrolled,
+      "bg-gray-900": pathname !== "/" && isScrolled,
+    })}>
       <div className="container flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
             <Image
               src="https://www.pienspavemasajsalonu.com/wp-content/uploads/pien_orj.png"
-              width={150}
+              width={isScrolled ? 130 : 150}
               height={150}
-              alt="Picture of the author"
+              alt="Isparta Gül Şehri Masaj Salonu Logosu"
             />
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className={cn("flex text-lg items-center space-x-4", {
+          "text-md": isScrolled,
+        }
+        )}>
+          <Link
+            href="/"
+            className={cn(" hover:text-yellow-500", {
+              "text-yellow-500": pathname === "/",
+            })}
+          >
+            Ana Sayfa
+          </Link>
           <Link
             href="/hakkimizda"
             className={cn("hover:text-yellow-500", {
@@ -57,7 +87,7 @@ const NavbarComponent = () => {
           </Link>
         </div>
         <div>
-          <Link href="/randevu-al">
+          <Link href="https://api.whatsapp.com/send/?phone=905302411232&text=Randevu%20almak%20istiyorum.">
             <button className="flex justify-between items-center gap-3 text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 hover:text-green-500 transition-all duration-300 ease-linear">
               <Icon
                 icon="logos:whatsapp-icon"
