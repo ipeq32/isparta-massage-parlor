@@ -32,7 +32,9 @@ const FormComponent = () => {
         break;
     }
     const phoneNumber = "905302411232";
-    const message = `Merhaba, ben ${formDetails.name.toUpperCase()}.\nSize websitenizdeki iletişim Formu üzerinden size ulaşıyorum.\n\nİletişim bilgilerim:\nE-posta: ${formDetails.email}\n\nMesaj: ${formDetails.message}`;
+    const message = `Merhaba, ben ${formDetails.name.toUpperCase()}.\nSize websitenizdeki iletişim Formu üzerinden size ulaşıyorum.\n\nİletişim bilgilerim:\nE-posta: ${
+      formDetails.email
+    }\n\nMesaj: ${formDetails.message}`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
@@ -71,7 +73,7 @@ const FormComponent = () => {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 Telefon
               </h2>
-              <p className="leading-relaxed">05302411232</p>
+              <p className="leading-relaxed">+90 (530) 241 12 32</p>
             </div>
           </div>
         </div>

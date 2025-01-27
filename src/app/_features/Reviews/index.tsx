@@ -72,17 +72,6 @@ export default function ReviewsFeature() {
                 Tümünü Gör
               </span>
             </Link>
-            {/* <Link href={leaveAReviews}>
-              <span className="text-base text-pink-700 font-medium text-center ">
-                Yorum Yaz
-              </span>
-            </Link>
-            |
-            <Link href={allReviewsLink}>
-              <span className="text-base text-blue-600 font-medium text-center ">
-                Tümünü Gör
-              </span>
-            </Link> */}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,9 +86,7 @@ export default function ReviewsFeature() {
                   height={40}
                 />
                 <div>
-                  <p className="font-semibold">
-                    {idx} {review.author_name}
-                  </p>
+                  <p className="font-semibold">{review.author_name}</p>
                   <p className="text-sm text-gray-500">
                     {review.relative_time_description}
                   </p>
