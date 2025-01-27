@@ -105,7 +105,10 @@ export default function ReviewsFeature() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews?.map((review, idx) => (
-            <div key={idx} className="bg-white shadow rounded p-6">
+            <div
+              key={idx}
+              className="flex flex-col justify-between bg-white shadow rounded p-6"
+            >
               <div className="flex items-center mb-4">
                 <Image
                   src={review.profile_photo_url}
@@ -122,7 +125,9 @@ export default function ReviewsFeature() {
                 </div>
               </div>
               {review.text && (
-                <p className="text-gray-700 italic mb-4">“{review.text}”</p>
+                <p className="text-gray-700 italic mb-4 line-clamp-2">
+                  “{review.text}”
+                </p>
               )}
               <div className="flex items-center mb-4">
                 {Array.from({ length: review.rating }, (_, i) => (
