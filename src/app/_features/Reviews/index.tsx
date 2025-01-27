@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Logger from "@/utils/logger";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface GoogleReview {
   author_name: string;
@@ -14,31 +15,48 @@ interface GoogleReview {
   text: string;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function ReviewsFeature() {
-  console.log("ReviewsFeature");
+  const [reviews, setReviews] = useState<GoogleReview[]>([]);
+  console.log("🚀 ~ ReviewsFeature ~ reviews:", reviews);
 
-  const { data, error } = useSWR("/api/reviews", fetcher, {
-    // revalidateOnFocus:
-    // refreshInterval: 0 => otomatik yenileme yok
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch("/api/reviews");
+        const data = await res.json();
+        setReviews(data.reviews);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    revalidateOnFocus: false, // false olduğunda yeniden istek atmaz | true olduğunda sekme odaklandığında yeniden istek atar
-    revalidateIfStale: false, // false olduğunda önbellekten alır | true olduğunda önbellekten almadan yeniden istek atar
-  });
-  console.log("api/reviews", data);
-  console.log("api/reviews", error);
+    fetchReviews();
+  }, []);
 
-  if (error) {
-    return <p className="text-red-500">Yorumlar alınırken hata oluştu!</p>;
-  }
+  // console.log("ReviewsFeature");
 
-  Logger.log("Reviews", "ready");
-  if (!data) {
-    Logger.log("!data", "cmd");
-    return <p>Yükleniyor...</p>;
-  }
-  const reviews: GoogleReview[] = data.reviews || [];
+  // const { data, error } = useSWR("/api/reviews", fetcher, {
+  //   // revalidateOnFocus:
+  //   // refreshInterval: 0 => otomatik yenileme yok
+
+  //   revalidateOnFocus: false, // false olduğunda yeniden istek atmaz | true olduğunda sekme odaklandığında yeniden istek atar
+  //   revalidateIfStale: false, // false olduğunda önbellekten alır | true olduğunda önbellekten almadan yeniden istek atar
+  // });
+  // console.log("api/reviews", data);
+  // console.log("api/reviews", error);
+
+  // if (error) {
+  //   return <p className="text-red-500">Yorumlar alınırken hata oluştu!</p>;
+  // }
+
+  // Logger.log("Reviews", "ready");
+  // if (!data) {
+  //   Logger.log("!data", "cmd");
+  //   return <p>Yükleniyor...</p>;
+  // }
+  // const reviews: GoogleReview[] = data.reviews || [];
 
   const leaveAReviews = `https://search.google.com/local/writereview?placeid=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID}`;
   const allReviewsLink =
@@ -75,8 +93,11 @@ export default function ReviewsFeature() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, idx) => (
-            <div key={idx} className="bg-white shadow rounded p-6">
+          {reviews?.map((review, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col justify-between bg-white shadow rounded p-6"
+            >
               <div className="flex items-center mb-4">
                 <Image
                   src={review.profile_photo_url}
@@ -93,7 +114,9 @@ export default function ReviewsFeature() {
                 </div>
               </div>
               {review.text && (
-                <p className="text-gray-700 italic mb-4">“{review.text}”</p>
+                <p className="text-gray-700 italic mb-4 line-clamp-2">
+                  “{review.text}”
+                </p>
               )}
               <div className="flex items-center mb-4">
                 {Array.from({ length: review.rating }, (_, i) => (
