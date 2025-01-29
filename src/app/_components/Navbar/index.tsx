@@ -23,13 +23,16 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <nav className={cn("flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out", {
-      "bg-gray-900/80": isScrolled,
-      "h-24": isScrolled,
-      "shadow-xl": isScrolled,
-      "bg-gray-800": pathname === "/" && isScrolled,
-      "bg-gray-900": pathname !== "/" && isScrolled,
-    })}>
+    <nav
+      className={cn(
+        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
+        {
+          "bg-gray-900/80 h-24 shadow-xl": isScrolled,
+          "bg-gray-800": pathname === "/" && isScrolled,
+          "bg-gray-900": pathname !== "/" && isScrolled,
+        }
+      )}
+    >
       <div className="container flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
@@ -41,10 +44,11 @@ const NavbarComponent = () => {
             />
           </Link>
         </div>
-        <div className={cn("flex text-lg items-center space-x-4", {
-          "text-md": isScrolled,
-        }
-        )}>
+        <div
+          className={cn("flex text-lg items-center space-x-4", {
+            "text-md": isScrolled,
+          })}
+        >
           <Link
             href="/"
             className={cn(" hover:text-yellow-500", {
