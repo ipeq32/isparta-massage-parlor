@@ -1,9 +1,6 @@
+import { GoogleReview } from "@/app/_features/Reviews";
 import Logger from "@/utils/logger";
 import { NextResponse } from "next/server";
-
-let cachedReviews: any = null;
-let lastFetchTime = 0;
-const CACHE_DURATION = 300 * 1000; // 5 dakikalık cache süresi
 
 export async function GET() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY;
@@ -14,13 +11,6 @@ export async function GET() {
       { error: "API key or placeId not configured." },
       { status: 500 }
     );
-  }
-
-  // Eğer cache süresi dolmadıysa, cachedReviews'u geri döndür
-  const now = Date.now();
-  if (cachedReviews && now - lastFetchTime < CACHE_DURATION) {
-    Logger.log("Veri önbellekten geliyor.", "performance");
-    return NextResponse.json({ reviews: cachedReviews });
   }
 
   // Cache süresi dolduysa, yeniden Google'a istek at
@@ -37,17 +27,15 @@ export async function GET() {
     const allReviews = data?.result?.reviews || [];
 
     const filteredReviews = allReviews.filter(
-      (review: any) => review.rating >= 2
+      (review: GoogleReview) => review.rating >= 2
     );
     console.log(filteredReviews);
     Logger.log("allReviews", "success");
 
-    cachedReviews = filteredReviews;
-    lastFetchTime = now;
-
-    return NextResponse.json({ filteredReviews });
-  } catch (error: any) {
-    Logger.log(`Google API error: ${error.message}`, "error");
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ reviews: filteredReviews });
+  } catch (error: unknown) {
+    const errorMessage = (error as Error).message;
+    Logger.log(`Google API error: ${errorMessage}`, "error");
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

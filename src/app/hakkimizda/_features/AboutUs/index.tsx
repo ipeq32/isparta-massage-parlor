@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const paragraphs = [
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit atque facilis saepe, temporibus esse tenetur consequatur, dolores, ratione facere ipsa exercitationem illum omnis. Error, alias? Reprehenderit, quidem voluptate tempora fuga debitis magnam impedit tenetur saepe accusamus magni nobis ad perferendis vitae neque voluptatibus consequatur quae optio corrupti! Et quia illo tenetur vero quasi eos. Commodi temporibus hic nobis vel, neque officiis iste atque molestias quam? Perferendis tenetur iusto dignissimos numquam quae sint non blanditiis officia nihil dolor. Voluptatum, ipsum sit rem pariatur nobis inventore omnis nihil maxime tempore at, cupiditate totam fuga quod. Vero magnam vitae perspiciatis modi alias tempore sunt fuga sit ipsam quia, maxime iusto repudiandae veniam reprehenderit fugit minima ex ab sint praesentium voluptas, magni, eligendi eaque obcaecati culpa! Nobis, inventore odit? Accusamus perferendis quis numquam laudantium amet, expedita, velit dolores neque harum, assumenda rerum nostrum recusandae. Odio quaerat nemo earum laboriosam, exercitationem optio itaque nostrum beatae eaque animi deleniti neque cumque repellat perspiciatis fugit totam labore expedita possimus blanditiis reprehenderit eum cum dicta nulla saepe. Dolor illo fuga nihil nisi suscipit tenetur in quos consequatur expedita vel earum nemo eaque, nulla dolore at tempore accusantium consequuntur fugiat repudiandae praesentium? Architecto voluptas delectus id! Laudantium, officiis.",
@@ -29,10 +30,11 @@ const AboutUsFeature = () => {
   return (
     <div className="min-h-screen">
       <figure className="relative h-[500px] overflow-hidden">
-        <img
-          src="https://www.atasehirmasajspa.com.tr/wp-content/uploads/sites/8/2025/01/atasehirin-gozde-masaj-salonu-remiks-spa-ile-essiz-bir-deneyim-1200x500.jpg"
+        <Image
+          src="/images/about-us.jpg"
           alt="About Us"
           className="object-cover opacity-60 aspect-video w-full"
+          fill
         />
         <figcaption className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <motion.h1

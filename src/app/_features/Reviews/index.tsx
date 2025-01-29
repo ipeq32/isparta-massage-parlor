@@ -1,19 +1,18 @@
 "use client";
 
-import useSWR from "swr";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Logger from "@/utils/logger";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-interface GoogleReview {
+export type GoogleReview = {
   author_name: string;
   profile_photo_url: string;
   rating: number;
   relative_time_description: string;
   text: string;
-}
+};
 
 // const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -26,16 +25,20 @@ export default function ReviewsFeature() {
       try {
         const res = await fetch("/api/reviews");
         const data = await res.json();
+
+        console.log("data: ", data);
+
         setReviews(data.reviews);
-      } catch (error) {
-        console.error(error);
+      } catch (error: unknown) {
+        const errorMessage = (error as Error).message;
+        Logger.log(`Google API error: ${errorMessage}`, "error");
       }
     };
 
     fetchReviews();
   }, []);
 
-  // console.log("ReviewsFeature");
+  console.log("ReviewsFeature", reviews);
 
   // const { data, error } = useSWR("/api/reviews", fetcher, {
   //   // revalidateOnFocus:
@@ -64,6 +67,7 @@ export default function ReviewsFeature() {
   // "https://www.google.com/search?uds=ABqPDvztZD_Nu18FR6tNPw2cK_RRzcb9rzA0njwM2ZZ2EY78Vm7QmPJygUmJ0fHf4AouI186zW3oVdcZbWHvl_E_m6Zwixdcrk1ByCSMr-_JlYUecEHr5Ef66K4eUBcxGMPh81cxuXdMIwBTthN8JX8giweI2wCqTixEEwXI2aG1AXfkEfqdiJQ&q=Rose%20Town%20Spa%20Ve%20Masaj%20Salonu%20Yorumlar&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzQ6rscYT32GE02aFvI7UcNPHsM-_7C9UoUiKBKplgTSFTuBTht9U_SSRkX2bVf6QizEb0PSWArvzam6Xk0dZtuiI51LCVkwHY1PgCeGf-MUqYjTD9Q%3D%3D&cs=1&hl=tr&sa=X&ved=0CCUQ_4MLahcKEwjYgaKxiZaLAxUAAAAAHQAAAAAQBw&biw=1286&bih=771&dpr=1";
 
   console.log("reviews", reviews);
+
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -92,44 +96,48 @@ export default function ReviewsFeature() {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews?.map((review, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col justify-between bg-white shadow rounded p-6"
-            >
-              <div className="flex items-center mb-4">
-                <Image
-                  src={review.profile_photo_url}
-                  alt={review.author_name}
-                  className="w-10 h-10 rounded-full mr-3"
-                  width={40}
-                  height={40}
-                />
-                <div>
-                  <p className="font-semibold">{review.author_name}</p>
-                  <p className="text-sm text-gray-500">
-                    {review.relative_time_description}
+        {reviews.length === 0 ? (
+          <div className="animate-spin"></div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reviews?.map((review, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col justify-between bg-white shadow rounded p-6"
+              >
+                <div className="flex items-center mb-4">
+                  <Image
+                    src={review.profile_photo_url}
+                    alt={review.author_name}
+                    className="w-10 h-10 rounded-full mr-3"
+                    width={40}
+                    height={40}
+                  />
+                  <div>
+                    <p className="font-semibold">{review.author_name}</p>
+                    <p className="text-sm text-gray-500">
+                      {review.relative_time_description}
+                    </p>
+                  </div>
+                </div>
+                {review.text && (
+                  <p className="text-gray-700 italic mb-4 line-clamp-2">
+                    “{review.text}”
                   </p>
+                )}
+                <div className="flex items-center mb-4">
+                  {Array.from({ length: review.rating }, (_, i) => (
+                    <Icon
+                      key={i}
+                      icon="material-symbols:star-rounded"
+                      className="text-yellow-500 w-5 h-5 mr-1"
+                    />
+                  ))}
                 </div>
               </div>
-              {review.text && (
-                <p className="text-gray-700 italic mb-4 line-clamp-2">
-                  “{review.text}”
-                </p>
-              )}
-              <div className="flex items-center mb-4">
-                {Array.from({ length: review.rating }, (_, i) => (
-                  <Icon
-                    key={i}
-                    icon="material-symbols:star-rounded"
-                    className="text-yellow-500 w-5 h-5 mr-1"
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

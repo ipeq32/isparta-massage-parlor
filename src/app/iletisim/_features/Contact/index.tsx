@@ -2,15 +2,17 @@
 
 import { motion } from "framer-motion";
 import FormComponent from "../../_components/Form";
+import Image from "next/image";
 
 const ContactFeature = () => {
   return (
     <div className="min-h-screen">
       <figure className="relative h-[500px] overflow-hidden">
-        <img
-          src="https://letsrelaxspa.com/wp-content/uploads/2017/08/banner1-2-e1529655312163.jpg"
+        <Image
+          src="/images/contact.jpg"
           alt="About Us"
           className="object-cover opacity-60 aspect-video w-full"
+          fill
         />
         <figcaption className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <motion.h1
