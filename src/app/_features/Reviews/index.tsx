@@ -2,7 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import Logger from "@/utils/logger";
+import Logger from "@/lib/logger";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
