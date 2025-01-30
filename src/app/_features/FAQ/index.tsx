@@ -89,7 +89,7 @@ export default function FAQFeatures() {
         Sıkça Sorulan Sorular
       </h1>
 
-      <div className="mx-auto w-full max-w-4xl">
+      <div className="mx-auto w-[90%] md:w-full md:max-w-4xl">
         <CustomAccordion items={accordionData} defaultIndex={0} />
       </div>
     </div>

@@ -71,10 +71,10 @@ export default function ReviewsFeature() {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="flex flex-row items-center justify-between mb-8 gap-2">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4 md:gap-2">
           <h2 className="text-3xl font-bold text-center">İşletme Yorumları</h2>
 
-          <div className="flex flex-row items-center justify-between mb-8 gap-4">
+          <div className="flex flex-row items-center justify-between gap-4">
             <Link
               href={leaveAReviews}
               target="_blank"

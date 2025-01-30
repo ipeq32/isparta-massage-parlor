@@ -10,31 +10,15 @@ const HomeFeature = () => {
       <div className="relative bg-slate-600">
         <div className="flex flex-row items-center justify-center">
           <Image
-            className="object-contain w-[1920px] h-screen"
+            className="object-cover w-[1920px] h-screen"
             src="/images/terapi.jpg"
             alt="Next.js logo"
             width={1920}
-            height={1080}
-            priority
-          />
-          <Image
-            className="object-contain w-[1920px] h-screen"
-            src="/images/terapi.jpg"
-            alt="Next.js logo"
-            width={1920}
-            height={1080}
-            priority
-          />
-          <Image
-            className="object-cover w-[264px] h-screen"
-            src="/images/terapi.jpg"
-            alt="Next.js logo"
-            width={500}
             height={1080}
             priority
           />
         </div>
-        <div className="absolute mx-auto bottom-80 right-0 left-0 text-white font-bold text-5xl backdrop-blur-lg w-max h-auto px-2 py-3 rounded-md">
+        <div className="absolute mx-auto bottom-80 right-0 left-0 text-white text-center font-bold text-3xl md:text-4xl lg:text-5xl backdrop-blur-lg w-[90%] md:w-[67%] h-auto px-2 py-3 rounded-md">
           Isparta Gül Şehri Spa & Masaj Salonu
         </div>
         {/* <div className="absolute inset-0 bg-gray-800"></div> */}
@@ -43,6 +27,7 @@ const HomeFeature = () => {
             href={"tel:+905302411232"}
             className="flex w-44 h-12 items-center justify-center border rounded-md bg-opacity-50 text-white font-semibold hover:bg-gray-800 hover:border-gray-800 transition-all duration-150 ease-linear backdrop-blur-lg"
           >
+            {/* Arama ikonu eklenecek */}
             Hemen Arayın!
           </Link>
           <Link
