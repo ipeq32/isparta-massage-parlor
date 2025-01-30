@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.pienspavemasajsalonu.com",
+        hostname: "www.atasehirmasajspa.com.tr",
         port: "",
         pathname: "/wp-content/uploads/**",
         search: "",

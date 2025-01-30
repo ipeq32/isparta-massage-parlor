@@ -37,8 +37,10 @@ export default function FAQFeatures() {
           yapılan uygulamalardır.
           <br />
           Spa terapileri ise genellikle hem fiziksel hem de zihinsel rahatlama
-          üzerine odaklanır. Ancak, birçok spa bakımı aynı zamanda cilt
-          sağlığını da destekleyebilir.
+          üzerine odaklanır.
+          <br />
+          Ancak, birçok spa bakımı aynı zamanda cilt sağlığını da
+          destekleyebilir.
         </>
       ),
     },
@@ -62,8 +64,10 @@ export default function FAQFeatures() {
           hedeflerine bağlı olarak değişebilir.
           <br />
           Genellikle, rahatlatıcı etkiyi sürdürmek ve fayda görmek için haftada
-          bir veya iki kez seanslar önerilir. Ancak, kişiselleştirilmiş bir plan
-          oluşturmak için terapistinizle görüşmek en iyisidir.
+          bir veya iki kez seanslar önerilir.
+          <br />
+          Ancak, kişiselleştirilmiş bir plan oluşturmak için terapistinizle
+          görüşmek en iyisidir.
         </>
       ),
     },
@@ -84,12 +88,12 @@ export default function FAQFeatures() {
   ];
 
   return (
-    <div className="flex flex-col justify-center min-h-screen ">
-      <h1 className="text-4xl font-bold mb-6 text-center">
+    <div className="container flex flex-col justify-center h-max py-[130px]">
+      <h1 className="text-4xl font-bold mb-6 text-left">
         Sıkça Sorulan Sorular
       </h1>
 
-      <div className="mx-auto w-[90%] md:w-full md:max-w-4xl">
+      <div>
         <CustomAccordion items={accordionData} defaultIndex={0} />
       </div>
     </div>
