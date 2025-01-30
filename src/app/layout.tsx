@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isparta GYM",
-  description: "Isparta GYM",
+  title: "Isparta Masaj Salonu",
+  description: "Isparta Masaj Salonu",
 };
 
 export default function RootLayout({
