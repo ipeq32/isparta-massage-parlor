@@ -23,28 +23,35 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <nav className={cn("flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out", {
-      "bg-gray-900/80": isScrolled,
-      "h-24": isScrolled,
-      "shadow-xl": isScrolled,
-      "bg-gray-800": pathname === "/" && isScrolled,
-      "bg-gray-900": pathname !== "/" && isScrolled,
-    })}>
+    <nav
+      className={cn(
+        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
+        {
+          "bg-gray-900/80": isScrolled,
+          "h-24": isScrolled,
+          "shadow-xl": isScrolled,
+          "bg-gray-800": pathname === "/" && isScrolled,
+          "bg-gray-900": pathname !== "/" && isScrolled,
+        }
+      )}
+    >
       <div className="container flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
             <Image
-              src="https://www.pienspavemasajsalonu.com/wp-content/uploads/pien_orj.png"
-              width={isScrolled ? 130 : 150}
-              height={150}
+              className="cursor-pointer rounded-full"
+              src="/assets/gul_sehri_beyaz_logo.png"
               alt="Isparta Gül Şehri Masaj Salonu Logosu"
+              width={isScrolled ? 80 : 90}
+              height={90}
             />
           </Link>
         </div>
-        <div className={cn("flex text-lg items-center space-x-4", {
-          "text-md": isScrolled,
-        }
-        )}>
+        <div
+          className={cn("flex text-lg items-center space-x-4", {
+            "text-md": isScrolled,
+          })}
+        >
           <Link
             href="/"
             className={cn(" hover:text-yellow-500", {
