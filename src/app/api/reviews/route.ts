@@ -1,5 +1,5 @@
 import { GoogleReview } from "@/app/_features/Reviews";
-import Logger from "@/utils/logger";
+import Logger from "@/lib/logger";
 import { NextResponse } from "next/server";
 
 export async function GET() {
