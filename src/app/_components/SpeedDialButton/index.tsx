@@ -9,6 +9,29 @@ import { ReactNode, useState } from "react";
 export default function SpeedDialButtonComponent() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const contacts = [
+    {
+      label: "İnstagram",
+      icon: <Icon icon="mdi:instagram" width="24" height="24" />,
+      href: "https://www.instagram.com",
+    },
+    {
+      label: "Facebook",
+      icon: <Icon icon="mdi:facebook" width="24" height="24" />,
+      href: "https://www.facebook.com",
+    },
+    {
+      label: "Twitter",
+      icon: <Icon icon="mdi:twitter" width="24" height="24" />,
+      href: "https://www.twitter.com",
+    },
+    {
+      label: "Whatsapp",
+      icon: <Icon icon="mdi:whatsapp" width="24" height="24" />,
+      href: "https://www.whatsapp.com",
+    },
+  ];
+
   return (
     <div className="flex justify-center items-center w-full relative min-h-[380px]">
       <div
@@ -21,46 +44,19 @@ export default function SpeedDialButtonComponent() {
           animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.3 }}
         >
-          <SpeedDialButton
-            {...{
-              initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
-              transition: { duration: 0.3 },
-            }}
-            label="İnstagram"
-            icon={<Icon icon="mdi:instagram" width="24" height="24" />}
-            href="https://www.instagram.com"
-          />
-          <SpeedDialButton
-            {...{
-              initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
-              transition: { duration: 0.3, delay: 0.1 },
-            }}
-            label="Facebook"
-            icon={<Icon icon="mdi:facebook" width="24" height="24" />}
-            href="https://www.facebook.com"
-          />
-          <SpeedDialButton
-            {...{
-              initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
-              transition: { duration: 0.3, delay: 0.2 },
-            }}
-            label="Twitter"
-            icon={<Icon icon="mdi:twitter" width="24" height="24" />}
-            href="https://www.twitter.com"
-          />
-          <SpeedDialButton
-            {...{
-              initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
-              transition: { duration: 0.3, delay: 0.3 },
-            }}
-            label="Whatsapp"
-            icon={<Icon icon="mdi:whatsapp" width="24" height="24" />}
-            href="https://www.whatsapp.com"
-          />
+          {contacts.map((contact, index) => (
+            <SpeedDialButton
+              key={index}
+              {...{
+                initial: { opacity: 0, x: -10 },
+                animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
+                transition: { duration: 0.3, delay: index * 0.1 },
+              }}
+              href={contact.href}
+              label={contact.label}
+              icon={contact.icon}
+            />
+          ))}
         </motion.div>
 
         <motion.button
