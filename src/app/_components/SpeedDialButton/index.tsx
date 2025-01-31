@@ -53,7 +53,7 @@ export default function SpeedDialButtonComponent() {
           onClick={() => setIsOpen((prev) => !prev)}
           className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
           initial={{ rotate: 0 }}
-          animate={{ rotate: isOpen ? 45 : 0 }}
+          animate={{ rotate: isOpen ? 135 : 0 }}
           transition={{ duration: 0.3 }}
         >
           <Icon icon="mdi:plus" className="w-10 h-10" />
