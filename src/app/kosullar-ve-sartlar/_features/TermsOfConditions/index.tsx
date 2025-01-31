@@ -43,7 +43,7 @@ const TermsOfConditionsFeature = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Neden Biz?
+            Kullanım Koşulları
           </motion.h1>
         </figcaption>
       </figure>
