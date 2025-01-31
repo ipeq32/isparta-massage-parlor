@@ -43,7 +43,7 @@ const PrivacyPolicyFeature = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Neden Biz?
+            Gizlilik Politikası
           </motion.h1>
         </figcaption>
       </figure>
