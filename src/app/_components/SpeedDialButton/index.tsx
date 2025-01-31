@@ -3,6 +3,7 @@
 import { cn } from "@/lib/classname";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { ReactNode, useState } from "react";
 
 export default function SpeedDialButtonComponent() {
@@ -28,6 +29,7 @@ export default function SpeedDialButtonComponent() {
             }}
             label="İnstagram"
             icon={<Icon icon="mdi:instagram" width="24" height="24" />}
+            href="https://www.instagram.com"
           />
           <SpeedDialButton
             {...{
@@ -37,6 +39,7 @@ export default function SpeedDialButtonComponent() {
             }}
             label="Facebook"
             icon={<Icon icon="mdi:facebook" width="24" height="24" />}
+            href="https://www.facebook.com"
           />
           <SpeedDialButton
             {...{
@@ -46,6 +49,7 @@ export default function SpeedDialButtonComponent() {
             }}
             label="Twitter"
             icon={<Icon icon="mdi:twitter" width="24" height="24" />}
+            href="https://www.twitter.com"
           />
         </motion.div>
 
@@ -66,12 +70,16 @@ export default function SpeedDialButtonComponent() {
 function SpeedDialButton({
   label,
   icon,
+  href,
   ...rest
 }: {
   label: string;
   icon: ReactNode;
+  href?: string;
 }) {
   const [isHover, setIsHover] = useState(false);
+
+  const router = useRouter();
 
   return (
     <motion.div {...rest} className="flex items-center gap-3 relative">
@@ -89,6 +97,7 @@ function SpeedDialButton({
       <button
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
+        onClick={() => href && router.push(href)}
         className="w-12 h-12 flex justify-center items-center bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50"
       >
         {icon}
