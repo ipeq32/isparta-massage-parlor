@@ -27,7 +27,7 @@ export default function SpeedDialButtonComponent() {
               transition: { duration: 0.3 },
             }}
             label="İnstagram"
-            icon={<Icon icon="mdi:instagram" />}
+            icon={<Icon icon="mdi:instagram" width="24" height="24" />}
           />
           <SpeedDialButton
             {...{
@@ -36,7 +36,7 @@ export default function SpeedDialButtonComponent() {
               transition: { duration: 0.3, delay: 0.1 },
             }}
             label="Facebook"
-            icon={<Icon icon="mdi:facebook" />}
+            icon={<Icon icon="mdi:facebook" width="24" height="24" />}
           />
           <SpeedDialButton
             {...{
@@ -45,16 +45,19 @@ export default function SpeedDialButtonComponent() {
               transition: { duration: 0.3, delay: 0.2 },
             }}
             label="Twitter"
-            icon={<Icon icon="mdi:twitter" />}
+            icon={<Icon icon="mdi:twitter" width="24" height="24" />}
           />
         </motion.div>
 
-        <button
+        <motion.button
           onClick={() => setIsOpen((prev) => !prev)}
           className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: isOpen ? 45 : 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <Icon icon="mdi:plus" className="w-6 h-6" />
-        </button>
+          <Icon icon="mdi:plus" className="w-10 h-10" />
+        </motion.button>
       </div>
     </div>
   );
