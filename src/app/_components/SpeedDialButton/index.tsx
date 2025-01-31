@@ -51,6 +51,16 @@ export default function SpeedDialButtonComponent() {
             icon={<Icon icon="mdi:twitter" width="24" height="24" />}
             href="https://www.twitter.com"
           />
+          <SpeedDialButton
+            {...{
+              initial: { opacity: 0, x: -10 },
+              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
+              transition: { duration: 0.3, delay: 0.3 },
+            }}
+            label="Whatsapp"
+            icon={<Icon icon="mdi:whatsapp" width="24" height="24" />}
+            href="https://www.whatsapp.com"
+          />
         </motion.div>
 
         <motion.button
