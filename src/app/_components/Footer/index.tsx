@@ -27,7 +27,7 @@ const FooterComponent = () => {
               <rect x="14" y="11" width="7" height="12"></rect>
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              Gül Şehri Spa ve Masaj Salonu
             </span>
           </Link>
           <div className="mt-6 lg:max-w-sm">
@@ -43,17 +43,17 @@ const FooterComponent = () => {
         </div>
         <div className="space-y-2 text-sm">
           <p className="text-base font-bold tracking-wide text-gray-900">
-            Contacts
+            İletişim
           </p>
           <div className="flex">
-            <p className="mr-1 text-gray-800">Phone:</p>
+            <p className="mr-1 text-gray-800">Telefon:</p>
             <a
-              href="tel:850-123-5021"
+              href="tel:905302411232"
               aria-label="Our phone"
               title="Our phone"
-              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 hover:underline"
             >
-              850-123-5021
+              +90 (530) 241 12 32
             </a>
           </div>
           <div className="flex">
@@ -62,28 +62,28 @@ const FooterComponent = () => {
               href="mailto:info@lorem.mail"
               aria-label="Our email"
               title="Our email"
-              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 hover:underline"
             >
-              info@lorem.mail
+              info@ispartagulsehrimasaj.com
             </a>
           </div>
           <div className="flex">
-            <p className="mr-1 text-gray-800">Address:</p>
+            <p className="mr-1 text-gray-800">Adres:</p>
             <a
-              href="https://www.google.com/maps"
+              href="https://maps.app.goo.gl/Zmmo5JkvuTHBzCVE9"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Our address"
               title="Our address"
-              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 hover:underline"
             >
-              312 Lovely Street, NY
+              Ulusoy Apartmanı, Karaağaç, Firdevs Cd. No: 8 D:14
             </a>
           </div>
         </div>
         <div>
           <span className="text-base font-bold tracking-wide text-gray-900">
-            Social
+            Sosyal Medya
           </span>
           <div className="flex items-center mt-1 space-x-3">
             <Link
@@ -120,7 +120,7 @@ const FooterComponent = () => {
       </div>
       <div className="container flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © 2025 Gül Şehri Spa ve Masaj Salonu. Tüm hakkı saklıdır.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
@@ -128,7 +128,7 @@ const FooterComponent = () => {
               href="/"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
-              F.A.Q
+              Gizlilik Politikası
             </Link>
           </li>
           <li>
@@ -136,15 +136,7 @@ const FooterComponent = () => {
               href="/"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
-              Privacy Policy
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-            >
-              Terms &amp; Conditions
+              Kullanım Koşulları
             </Link>
           </li>
         </ul>
