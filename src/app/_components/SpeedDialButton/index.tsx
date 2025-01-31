@@ -23,7 +23,7 @@ export default function SpeedDialButtonComponent() {
           <SpeedDialButton
             {...{
               initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 },
+              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
               transition: { duration: 0.3 },
             }}
             label="İnstagram"
@@ -32,7 +32,7 @@ export default function SpeedDialButtonComponent() {
           <SpeedDialButton
             {...{
               initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 },
+              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
               transition: { duration: 0.3, delay: 0.1 },
             }}
             label="Facebook"
@@ -41,7 +41,7 @@ export default function SpeedDialButtonComponent() {
           <SpeedDialButton
             {...{
               initial: { opacity: 0, x: -10 },
-              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 },
+              animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
               transition: { duration: 0.3, delay: 0.2 },
             }}
             label="Twitter"
