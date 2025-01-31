@@ -50,7 +50,10 @@ export default function SpeedDialButtonComponent() {
               {...{
                 initial: { opacity: 0, x: -10 },
                 animate: isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 },
-                transition: { duration: 0.3, delay: index * 0.1 },
+                transition: {
+                  duration: 0.3,
+                  delay: (contacts.length - 1 - index) * 0.1,
+                },
               }}
               href={contact.href}
               label={contact.label}
