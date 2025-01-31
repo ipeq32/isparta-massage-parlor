@@ -133,7 +133,7 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/gizlilik-politikasi"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               Privacy Policy
