@@ -94,7 +94,7 @@ function SpeedDialButton({
     <motion.div {...rest} className="flex items-center gap-3 relative">
       <span
         className={cn(
-          "text-sm text-gray-600 transition-opacity backdrop-blur-md rounded-full px-2 py-1 absolute right-14 bg-white shadow-sm",
+          "text-sm text-gray-600 transition-opacity backdrop-blur-md rounded-full px-2 py-1 absolute right-14 bg-white shadow-lg",
           {
             "opacity-100": isHover,
             "opacity-0": !isHover,
@@ -102,7 +102,7 @@ function SpeedDialButton({
         )}
       >
         {label}
-        <span className="absolute top-1/2 right-[-6px] w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-4 border-l-white transform -translate-y-1/2"></span>
+        <span className="absolute top-1/2 right-[-6px] w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-4 border-l-white transform -translate-y-1/2" />
       </span>
       <button
         onMouseEnter={() => setIsHover(true)}
