@@ -141,7 +141,7 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/kosullar-ve-sartlar"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               Terms &amp; Conditions
