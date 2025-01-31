@@ -99,6 +99,7 @@ function SpeedDialButton({
         )}
       >
         {label}
+        <span className="absolute top-1/2 right-[-6px] w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-4 border-l-white transform -translate-y-1/2"></span>
       </span>
       <button
         onMouseEnter={() => setIsHover(true)}
