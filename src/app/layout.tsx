@@ -5,6 +5,7 @@ import NavbarComponent from "@/app/_components/Navbar";
 import FooterComponent from "./_components/Footer";
 import { ToastContainer } from "react-toastify";
 import Script from "next/script";
+import SpeedDialButtonComponent from "./_components/SpeedDialButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,9 @@ export default function RootLayout({
       >
         <NavbarComponent />
         {children}
+        <div className="fixed bottom-6 right-2">
+          <SpeedDialButtonComponent />
+        </div>
         <ToastContainer />
         <FooterComponent />
       </body>
