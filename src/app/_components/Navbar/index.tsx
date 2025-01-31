@@ -137,7 +137,7 @@ const NavbarComponent = () => {
           <Link href="/">
             <Image
               className="cursor-pointer rounded-full"
-              src="/assets/gul_sehri_beyaz_logo.png"
+              src="/assets/gul_sehri_beyaz_logo_yazisiz.png"
               alt="Isparta Gül Şehri Masaj Salonu Logosu"
               width={isScrolled ? 80 : 90}
               height={90}

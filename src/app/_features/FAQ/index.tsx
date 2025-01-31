@@ -90,6 +90,7 @@ export default function FAQFeatures() {
   return (
     <div className="container flex flex-col justify-center h-max py-[130px]">
       <h1 className="text-4xl font-bold mb-6 text-left">
+        {/** text-center eklenecek */}
         Sıkça Sorulan Sorular
       </h1>
 

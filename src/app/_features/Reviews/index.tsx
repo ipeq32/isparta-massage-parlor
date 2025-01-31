@@ -71,7 +71,7 @@ export default function ReviewsFeature() {
   return (
     <section className="flex flex-col justify-center h-[550px]">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4 md:gap-2">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4 md:gap-2">
           <h2 className="text-3xl font-bold text-center">İşletme Yorumları</h2>
 
           <div className="flex flex-row items-center justify-between gap-4">
@@ -103,7 +103,7 @@ export default function ReviewsFeature() {
             {reviews?.map((review, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-between bg-white shadow rounded p-6"
+                className="flex flex-col justify-between shadow-2xl rounded-md p-6"
               >
                 <div className="flex items-center mb-4">
                   <Image
