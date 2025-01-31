@@ -141,7 +141,7 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              href="/kosullar-ve-sartlar"
+              href="/kullanim-kosullari"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               Kullanım Koşulları
