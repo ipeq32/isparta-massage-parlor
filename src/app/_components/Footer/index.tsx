@@ -125,7 +125,7 @@ const FooterComponent = () => {
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
             <Link
-              href="/"
+              href="/gizlilik-politikasi"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               Gizlilik Politikası
@@ -133,7 +133,7 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/kullanim-kosullari"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               Kullanım Koşulları
