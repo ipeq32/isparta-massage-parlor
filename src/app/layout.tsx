@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   description:
     "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın. ✓ Profesyonel terapistler ✓ Steril ortam ✓ Uygun fiyatlar",
   keywords: [
+    "isparta masaj",
     "Isparta masaj",
     "spa merkezi",
     "masaj salonu",
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
     "profesyonel masaj",
     "spa hizmetleri",
     "Isparta spa",
+    "isparta spa",
   ],
   authors: [{ name: "Isparta Gül Şehri Spa & Masaj Salonu" }],
   creator: "Isparta Gül Şehri Spa & Masaj Salonu",

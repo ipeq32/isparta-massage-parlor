@@ -88,6 +88,7 @@ const GalleryFeature = () => {
                     className="h-auto max-w-full rounded-lg"
                     src={url}
                     alt=""
+                    // alt şeyler eklenecek
                   />
                 </motion.div>
               ))}
