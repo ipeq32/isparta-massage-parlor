@@ -69,7 +69,8 @@ export default function ReviewsFeature() {
   console.log("reviews", reviews);
 
   return (
-    <section className="flex flex-col justify-center h-[550px]">
+    <section className="flex flex-col justify-center py-20 h-max">
+      {/* Responsive yapılacak */}
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4 md:gap-2">
           <h2 className="text-3xl font-bold text-center">İşletme Yorumları</h2>
@@ -96,14 +97,18 @@ export default function ReviewsFeature() {
             </Link>
           </div>
         </div>
+
         {reviews.length === 0 ? (
-          <div className="animate-spin"></div>
+          <Icon
+            icon="line-md:loading-twotone-loop"
+            className="w-40 h-40 text-blue-500"
+          />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews?.map((review, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-between shadow-2xl rounded-md p-6"
+                className="flex flex-col justify-between shadow-2xl rounded-lg p-6"
               >
                 <div className="flex items-center mb-4">
                   <Image

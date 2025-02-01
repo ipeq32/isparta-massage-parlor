@@ -16,5 +16,5 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss-debug-screens")],
 } satisfies Config;

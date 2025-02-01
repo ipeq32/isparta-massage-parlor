@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description: "Isparta Masaj Salonu",
 };
 
+const NODE_ENV = process.env.NODE_ENV;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +48,9 @@ export default function RootLayout({
         }}
       />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${
+          NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         <NavbarComponent />
         {children}
