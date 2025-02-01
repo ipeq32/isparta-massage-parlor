@@ -18,8 +18,64 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isparta Masaj Salonu",
-  description: "Isparta Masaj Salonu",
+  title: {
+    default:
+      "Isparta Gül Şehri Spa & Masaj Salonu | Profesyonel Masaj Hizmetleri",
+    template: "%s | Isparta Gül Şehri Spa & Masaj Salonu",
+  },
+  description:
+    "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın. ✓ Profesyonel terapistler ✓ Steril ortam ✓ Uygun fiyatlar",
+  keywords: [
+    "Isparta masaj",
+    "spa merkezi",
+    "masaj salonu",
+    "aroma terapi",
+    "klasik masaj",
+    "sıcak taş masajı",
+    "profesyonel masaj",
+    "spa hizmetleri",
+    "Isparta spa",
+  ],
+  authors: [{ name: "Isparta Gül Şehri Spa & Masaj Salonu" }],
+  creator: "Isparta Gül Şehri Spa & Masaj Salonu",
+  publisher: "Isparta Gül Şehri Spa & Masaj Salonu",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
+  // verification: {
+  //   google: "G-RLKC1XDH1K", // Google Search Console verification code (https://search.google.com/search-console)
+  // },
+  openGraph: {
+    title:
+      "Isparta Gül Şehri Spa & Masaj Salonu | Profesyonel Masaj Hizmetleri",
+    description:
+      "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın.",
+    url: "https://ispartagulsehrimasaj.com",
+    siteName: "Isparta Gül Şehri Spa & Masaj Salonu",
+    images: [
+      {
+        url: "https://ispartagulsehrimasaj.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Isparta Gül Şehri Spa & Masaj Salonu",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 const NODE_ENV = process.env.NODE_ENV;

@@ -1,7 +1,6 @@
 "use client";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
-import React from "react";
 
 interface ServiceItem {
   title: string;
@@ -40,14 +39,12 @@ const servicesData: ServiceItem[] = [
 
 export default function MassageServices() {
   return (
-    <div className="flex flex-col justify-center py-20 h-max">
+    <section className="flex flex-col justify-center py-20 h-max">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4 md:gap-2">
+        <header className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4 md:gap-2">
           <h2 className="text-3xl font-bold text-left">Hizmetlerimiz</h2>
-        </div>
-
-        {/* Kartları yan yana dizmek için inline-flex ya da flex + gap kullanabilirsiniz */}
-        <div className="flex flex-wrap space-y-4 mx-auto justify-center items-end mt-2 grid-cols-2 gap-4 md:gap-8 md:grid-cols-3 lg:grid-cols-4 lg:space-y-4">
+        </header>
+        <article className="flex flex-wrap space-y-4 mx-auto justify-center items-end mt-2 grid-cols-2 gap-4 md:gap-8 md:grid-cols-3 lg:grid-cols-4 lg:space-y-4">
           {servicesData.length === 0 ? (
             <Icon
               icon="line-md:loading-twotone-loop"
@@ -62,7 +59,7 @@ export default function MassageServices() {
                 <div className="relative w-full h-[340px] md:h-60 mb-3">
                   <Image
                     src={service.imageUrl}
-                    alt={service.title}
+                    alt={`${service.title} - Isparta Gül Şehri Spa & Masaj Salonu`}
                     fill
                     className="object-cover rounded-md"
                   />
@@ -74,8 +71,8 @@ export default function MassageServices() {
               </div>
             ))
           )}
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 }
