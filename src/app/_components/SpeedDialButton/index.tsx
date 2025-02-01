@@ -62,15 +62,23 @@ export default function SpeedDialButtonComponent() {
           ))}
         </motion.div>
 
-        <motion.button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
-          initial={{ rotate: 0 }}
-          animate={{ rotate: isOpen ? 135 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Icon icon="mdi:plus" className="w-10 h-10" />
-        </motion.button>
+        <div className="flex items-center">
+          {!isOpen && (
+            <span className="flex items-center text-lg text-gray-600 mr-2 transition-opacity backdrop-blur-md rounded-full px-2.5 py-1 bg-white shadow-lg">
+              İletişim
+              <span className="ml-2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-black" />
+            </span>
+          )}
+          <motion.button
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: isOpen ? 135 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Icon icon="mdi:plus" className="w-10 h-10" />
+          </motion.button>
+        </div>
       </div>
     </div>
   );
