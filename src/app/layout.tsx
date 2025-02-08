@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Burada metadata objenizi olduğu gibi koruyabilirsiniz
 export const metadata: Metadata = {
   title: {
     default:
@@ -46,9 +47,6 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  // verification: {
-  //   google: "G-RLKC1XDH1K", // Google Search Console verification code (https://search.google.com/search-console)
-  // },
   openGraph: {
     title:
       "Isparta Gül Şehri Spa & Masaj Salonu | Profesyonel Masaj Hizmetleri",
@@ -84,32 +82,60 @@ const NODE_ENV = process.env.NODE_ENV;
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="tr">
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-RLKC1XDH1K"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <head>
+        {/* Google Tag Manager: Script Kodu */}
+        <Script
+          id="gtm-base"
+          strategy="beforeInteractive" // veya "afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','AW-11516061259');
+            `,
+          }}
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${
+          NODE_ENV === "development" ? "debug-screens" : ""
+        }`}
+      >
+        {/* Google Tag Manager: NoScript Fallback */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+              <iframe src="https://www.googletagmanager.com/ns.html?id=AW-11516061259"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            `,
+          }}
+        />
+
+        {/* Google Analytics 4 (GTAG.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RLKC1XDH1K"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-RLKC1XDH1K');
             `,
-        }}
-      />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${
-          NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
-      >
+          }}
+        />
+
         <NavbarComponent />
         {children}
         <div className="fixed bottom-6 right-2">
