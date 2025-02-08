@@ -84,10 +84,12 @@ const GalleryFeature = () => {
                   variants={childVariants}
                   className="overflow-hidden"
                 >
-                  <img
+                  <Image
                     className="h-auto max-w-full rounded-lg"
                     src={url}
                     alt=""
+                    width={500}
+                    height={500}
                     // alt şeyler eklenecek
                   />
                 </motion.div>
