@@ -1,5 +1,6 @@
 "use client";
 
+import { reportConversion } from "@/lib/reportConversion";
 import Image from "next/image";
 import Link from "next/link";
 // import home from "./images/home.jpg";
@@ -24,7 +25,11 @@ const HomeFeature = () => {
         {/* <div className="absolute inset-0 bg-gray-800"></div> */}
         <div className="absolute flex justify-center gap-6 bottom-20 right-0 left-0">
           <Link
-            href={"tel:+905302411232"}
+            href={"tel:905302411232"}
+            onClick={(e) => {
+              e.preventDefault();
+              reportConversion("tel:905302411232");
+            }}
             className="flex w-44 h-12 items-center justify-center border rounded-md bg-opacity-50 text-white font-semibold hover:bg-gray-800 hover:border-gray-800 transition-all duration-150 ease-linear backdrop-blur-lg"
           >
             {/* Arama ikonu eklenecek */}

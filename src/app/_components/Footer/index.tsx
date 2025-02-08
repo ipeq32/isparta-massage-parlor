@@ -1,3 +1,6 @@
+"use client";
+
+import { reportConversion } from "@/lib/reportConversion";
 import Link from "next/link";
 
 const FooterComponent = () => {
@@ -52,6 +55,10 @@ const FooterComponent = () => {
               aria-label="Our phone"
               title="Our phone"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                reportConversion("tel:905302411232");
+              }}
             >
               +90 (530) 241 12 32
             </a>
