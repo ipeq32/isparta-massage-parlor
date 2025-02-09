@@ -3,28 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const galleryContent = [
-  [
-    "/images/gallery/image00041-scaled.jpg",
-    "/images/gallery/image00022-scaled.jpg",
-    "/images/gallery/image00058-scaled.jpg",
-  ],
-  [
-    "/images/gallery/image00049-scaled.jpg",
-    "/images/gallery/image00053-scaled.jpg",
-    "/images/gallery/image00055-scaled.jpg",
-  ],
-  [
-    "/images/gallery/image00047-scaled.jpg",
-    "/images/gallery/image00041-scaled.jpg",
-    "/images/gallery/image00028-scaled.jpg",
-  ],
-  [
-    "/images/gallery/image00027-scaled.jpg",
-    "/images/gallery/image00024-scaled.jpg",
-    "/images/gallery/image00022-scaled.jpg",
-  ],
-];
+const galleryContent = [[], [], [], []];
 
 const containerVariants = {
   hidden: { opacity: 0 },
