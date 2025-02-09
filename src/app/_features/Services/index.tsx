@@ -10,31 +10,40 @@ interface ServiceItem {
 
 const servicesData: ServiceItem[] = [
   {
-    title: "Aroma Terapi",
-    description: "Doğal uçucu yağlar ile rahatlatıcı masaj deneyimi.",
-    imageUrl: "/images/massage.jpg",
-  },
-  {
     title: "Klasik Masaj",
-    description: "Kan dolaşımını düzenleyerek kas ağrılarını azaltır.",
+    description: "Temel masaj tekniği, kas gerginliğini azaltır.",
     imageUrl: "/images/massage.jpg",
   },
   {
-    title: "Sıcak Taş Masajı",
-    description: "Isıtılmış volkanik taşlarla bedeninizi sıcacık rahatlatın.",
+    title: "Medical Masaj",
+    description: "Ağrı ve tedavi odaklı, hedefli masaj yöntemleri.",
     imageUrl: "/images/massage.jpg",
   },
   {
-    title: "Spor Masajı",
-    description: "Yoğun antrenman sonrası kas yorgunluğunu atmak için birebir.",
+    title: "Lenf Masajı",
+    description: "Toksin atımını hızlandırır, ödemi azaltır.",
     imageUrl: "/images/massage.jpg",
   },
   {
-    title: "Spor Masajı",
-    description: "Yoğun antrenman sonrası kas yorgunluğunu atmak için birebir.",
+    title: "Mix Masaj",
+    description: "Farklı teknikleri birleştirerek çok yönlü rahatlama sağlar.",
     imageUrl: "/images/massage.jpg",
   },
-  // İstediğiniz kadar hizmet ekleyebilirsiniz...
+  {
+    title: "Bali Relax Masaj",
+    description: "Hafif dokunuş ve aromalarla sakinleştirici bir deneyim.",
+    imageUrl: "/images/massage.jpg",
+  },
+  {
+    title: "Aroma Terapi Masaj",
+    description: "Uçucu yağlarla ruh ve bedeni dinginleştirir.",
+    imageUrl: "/images/massage.jpg",
+  },
+  {
+    title: "Sultan Masajı",
+    description: "Lüks ve kapsamlı dokunuşlarla özel bir rahatlama sunar.",
+    imageUrl: "/images/massage.jpg",
+  },
 ];
 
 export default function MassageServices() {

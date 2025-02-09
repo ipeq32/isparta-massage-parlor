@@ -1,6 +1,7 @@
 "use client";
 
 import { reportConversion } from "@/lib/reportConversion";
+import Image from "next/image";
 import Link from "next/link";
 
 const FooterComponent = () => {
@@ -10,25 +11,18 @@ const FooterComponent = () => {
         <div className="sm:col-span-2">
           <Link
             href="/"
-            aria-label="Go home"
-            title="Company"
+            aria-label="Gül Şehri Spa & Masaj Salonu"
+            title="Isparta Gül Şehri Spa & Masaj Salonu"
             className="inline-flex items-center"
           >
-            <svg
-              className="w-8 text-deep-purple-accent-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12"></rect>
-              <rect x="3" y="17" width="7" height="6"></rect>
-              <rect x="14" y="1" width="7" height="6"></rect>
-              <rect x="14" y="11" width="7" height="12"></rect>
-            </svg>
+            <Image
+              className="object-contain"
+              src="/assets/gul_sehri_renksiz_logo2.png"
+              alt="Isparta Gül Şehri Masaj Salonu Logosu"
+              width={40}
+              height={40}
+              priority
+            />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
               Gül Şehri Spa ve Masaj Salonu
             </span>
