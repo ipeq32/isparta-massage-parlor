@@ -13,22 +13,17 @@ export default function SpeedDialButtonComponent() {
     {
       label: "İnstagram",
       icon: <Icon icon="mdi:instagram" width="24" height="24" />,
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/ispartagulsehrimasaj",
     },
     {
       label: "Facebook",
       icon: <Icon icon="mdi:facebook" width="24" height="24" />,
-      href: "https://www.facebook.com",
-    },
-    {
-      label: "Twitter",
-      icon: <Icon icon="mdi:twitter" width="24" height="24" />,
-      href: "https://www.twitter.com",
+      href: "https://www.facebook.com/RoseTownSpaCenter",
     },
     {
       label: "Whatsapp",
       icon: <Icon icon="mdi:whatsapp" width="24" height="24" />,
-      href: "https://www.whatsapp.com",
+      href: "https://api.whatsapp.com/send/?phone=905302411232",
     },
   ];
 

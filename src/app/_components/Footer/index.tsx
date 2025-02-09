@@ -65,7 +65,7 @@ const FooterComponent = () => {
               title="Our email"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 hover:underline"
             >
-              info@ispartagulsehrimasaj.com
+              ispartagulsehrimasaj@gmail.com
             </a>
           </div>
           <div className="flex">
@@ -124,7 +124,7 @@ const FooterComponent = () => {
           © 2025 Gül Şehri Spa ve Masaj Salonu. Tüm hakkı saklıdır.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-          <li>
+          {/* <li>
             <Link
               href="/gizlilik-politikasi"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -139,7 +139,7 @@ const FooterComponent = () => {
             >
               Kullanım Koşulları
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </footer>

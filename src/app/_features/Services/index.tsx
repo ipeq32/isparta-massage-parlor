@@ -12,37 +12,37 @@ const servicesData: ServiceItem[] = [
   {
     title: "Klasik Masaj",
     description: "Temel masaj tekniği, kas gerginliğini azaltır.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-klasik-masaj.jpg",
   },
   {
-    title: "Medical Masaj",
+    title: "Medikal Masaj",
     description: "Ağrı ve tedavi odaklı, hedefli masaj yöntemleri.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-medikal-masaj.jpg",
   },
   {
     title: "Lenf Masajı",
     description: "Toksin atımını hızlandırır, ödemi azaltır.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-lenf-masaji.jpg",
   },
   {
     title: "Mix Masaj",
     description: "Farklı teknikleri birleştirerek çok yönlü rahatlama sağlar.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-mix-masaj.jpg",
   },
   {
     title: "Bali Relax Masaj",
     description: "Hafif dokunuş ve aromalarla sakinleştirici bir deneyim.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-bali-relax-masaj.jpg",
   },
   {
     title: "Aroma Terapi Masaj",
     description: "Uçucu yağlarla ruh ve bedeni dinginleştirir.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-aroma-terapi-masaj.jpg",
   },
   {
     title: "Sultan Masajı",
     description: "Lüks ve kapsamlı dokunuşlarla özel bir rahatlama sunar.",
-    imageUrl: "/images/massage.jpg",
+    imageUrl: "/images/services/isparta-sultan-masaji.jpg",
   },
 ];
 

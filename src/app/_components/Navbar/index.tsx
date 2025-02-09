@@ -106,7 +106,7 @@ const NavbarComponent = () => {
         >
           Neden Biz
         </Link>
-        <Link
+        {/* <Link
           href="/galeri"
           className={cn(
             "hover:text-yellow-500 w-full text-nowrap text-center",
@@ -116,7 +116,7 @@ const NavbarComponent = () => {
           )}
         >
           Galeri
-        </Link>
+        </Link> */}
       </>
     );
   };
@@ -136,7 +136,7 @@ const NavbarComponent = () => {
         <div className="flex items-center space-x-4">
           <Link href="/">
             <Image
-              className="cursor-pointer rounded-full"
+              className="cursor-pointer rounded-full border-[#44215c] border-4"
               src="/assets/gul_sehri_beyaz_logo_yazisiz.png"
               alt="Isparta Gül Şehri Masaj Salonu Logosu"
               width={isScrolled ? 80 : 90}
