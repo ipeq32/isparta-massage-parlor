@@ -65,9 +65,9 @@ const NavbarComponent = () => {
         <Link
           href="/"
           className={cn(
-            " hover:text-yellow-500 w-full text-nowrap text-center",
+            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-yellow-500": pathname === "/",
+              "text-violet-200 border-b-purple-200": pathname === "/",
             }
           )}
         >
@@ -76,9 +76,9 @@ const NavbarComponent = () => {
         <Link
           href="/hakkimizda"
           className={cn(
-            "hover:text-yellow-500 w-full text-nowrap text-center",
+            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-yellow-500": pathname === "/hakkimizda",
+              "text-violet-200 border-b-purple-200": pathname === "/hakkimizda",
             }
           )}
         >
@@ -87,9 +87,9 @@ const NavbarComponent = () => {
         <Link
           href="/iletisim"
           className={cn(
-            "hover:text-yellow-500 w-full text-nowrap text-center",
+            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-yellow-500": pathname === "/iletisim",
+              "text-violet-200 border-b-purple-200": pathname === "/iletisim",
             }
           )}
         >
@@ -98,9 +98,9 @@ const NavbarComponent = () => {
         <Link
           href="/neden-biz"
           className={cn(
-            "hover:text-yellow-500 w-full text-nowrap text-center",
+            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-yellow-500": pathname === "/neden-biz",
+              "text-violet-200 border-b-purple-200": pathname === "/neden-biz",
             }
           )}
         >
@@ -109,9 +109,9 @@ const NavbarComponent = () => {
         {/* <Link
           href="/galeri"
           className={cn(
-            "hover:text-yellow-500 w-full text-nowrap text-center",
+          `hover:text-violet-200 w-full text-nowrap ${isScrolled ? 'text-fuchsia-200' : 'text-purple-700'} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-yellow-500": pathname === "/galeri",
+              "text-violet-200 border-b-purple-200": pathname === "/galeri",
             }
           )}
         >
@@ -126,9 +126,9 @@ const NavbarComponent = () => {
       className={cn(
         "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
         {
-          "bg-gray-900/80 h-24 shadow-xl": isScrolled,
-          "bg-gray-800": pathname === "/" && isScrolled,
-          "bg-gray-900": pathname !== "/" && isScrolled,
+          "bg-purple-700/80 h-24 shadow-xl": isScrolled,
+          "bg-purple-600": pathname === "/" && isScrolled,
+          "bg-purple-700": pathname !== "/" && isScrolled,
         }
       )}
     >
@@ -145,9 +145,12 @@ const NavbarComponent = () => {
           </Link>
         </div>
         <div
-          className={cn("flex text-lg items-center space-x-4 max-md:hidden", {
-            "text-md": isScrolled,
-          })}
+          className={cn(
+            "flex text-lg items-center space-x-4 max-md:hidden h-[90px]",
+            {
+              "text-md": isScrolled,
+            }
+          )}
         >
           {navbarLinks()}
         </div>
@@ -166,7 +169,7 @@ const NavbarComponent = () => {
           <button
             id="mobile-menu-button"
             className={cn(
-              "text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 hover:text-green-500 transition-all duration-300 ease-linear",
+              "text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 hover:text-green-400 transition-all duration-300 ease-linear",
               {
                 "bg-gray-700 text-green-500": false, // buraya mobile menu açıkken icon rengi verilecek
               }
