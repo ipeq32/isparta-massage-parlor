@@ -35,7 +35,7 @@ export default function CustomAccordion({
         return (
           <div
             key={index}
-            className="border border-gray-200 rounded shadow-sm overflow-hidden"
+            className="border border-gray-200 rounded shadow-sm shadow-purple-300 overflow-hidden"
           >
             {/* Başlık (AccordionTrigger) */}
             <button
