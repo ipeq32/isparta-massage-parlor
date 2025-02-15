@@ -29,7 +29,7 @@ export async function GET() {
     const filteredReviews = allReviews.filter(
       (review: GoogleReview) => review.rating >= 2
     );
-    console.log(filteredReviews);
+
     Logger.log("allReviews", "success");
 
     return NextResponse.json({ reviews: filteredReviews });

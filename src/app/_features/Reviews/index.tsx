@@ -18,15 +18,12 @@ export type GoogleReview = {
 
 export default function ReviewsFeature() {
   const [reviews, setReviews] = useState<GoogleReview[]>([]);
-  console.log("🚀 ~ ReviewsFeature ~ reviews:", reviews);
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const res = await fetch("/api/reviews");
         const data = await res.json();
-
-        console.log("data: ", data);
 
         setReviews(data.reviews);
       } catch (error: unknown) {
@@ -37,8 +34,6 @@ export default function ReviewsFeature() {
 
     fetchReviews();
   }, []);
-
-  console.log("ReviewsFeature", reviews);
 
   // const { data, error } = useSWR("/api/reviews", fetcher, {
   //   // revalidateOnFocus:
@@ -65,8 +60,6 @@ export default function ReviewsFeature() {
   const allReviewsLink =
     "https://www.google.com/search?sa=X&sca_esv=82d425a508629bf6&cs=1&hl=tr&tbm=lcl&sxsrf=AHTn8zrJ2o4cGXlxDKb_Ev4JpHlMQu59rA:1737987187843&q=Rose%20Town%20Spa%20Ve%20Masaj%20Salonu%20Yorumlar&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIyNrW0MDcxM7c0tLA0NTQ3NzLdwMj4ilEtKL84VSEkvzxPIbggUSEsVcE3sTgxSyE4MSc_r1QhMr-oNDcnsWgRK5EKAf2_4QtrAAAA&rldimm=359874679189517725&ved=0CAcQ5foLahcKEwi4yZ_pipaLAxUAAAAAHQAAAAAQBg&biw=957&bih=766&dpr=1#lkt=LocalPoiReviews&arid=ChdDSUhNMG9nS0VJQ0FnSUR2bGNEQWlRRRAB";
   // "https://www.google.com/search?uds=ABqPDvztZD_Nu18FR6tNPw2cK_RRzcb9rzA0njwM2ZZ2EY78Vm7QmPJygUmJ0fHf4AouI186zW3oVdcZbWHvl_E_m6Zwixdcrk1ByCSMr-_JlYUecEHr5Ef66K4eUBcxGMPh81cxuXdMIwBTthN8JX8giweI2wCqTixEEwXI2aG1AXfkEfqdiJQ&q=Rose%20Town%20Spa%20Ve%20Masaj%20Salonu%20Yorumlar&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzQ6rscYT32GE02aFvI7UcNPHsM-_7C9UoUiKBKplgTSFTuBTht9U_SSRkX2bVf6QizEb0PSWArvzam6Xk0dZtuiI51LCVkwHY1PgCeGf-MUqYjTD9Q%3D%3D&cs=1&hl=tr&sa=X&ved=0CCUQ_4MLahcKEwjYgaKxiZaLAxUAAAAAHQAAAAAQBw&biw=1286&bih=771&dpr=1";
-
-  console.log("reviews", reviews);
 
   return (
     <section className="flex flex-col justify-center py-20 h-max">
