@@ -126,7 +126,7 @@ const NavbarComponent = () => {
       className={cn(
         "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
         {
-          "bg-purple-700/80 h-24 shadow-xl": isScrolled,
+          "bg-purple-700/80 h-24 shadow-xl shadow-purple-300": isScrolled,
           "bg-purple-600": pathname === "/" && isScrolled,
           "bg-purple-700": pathname !== "/" && isScrolled,
         }
