@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Isparta Gül Şehri Spa & Masaj Salonu",
   },
   description:
-    "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın. ✓ Profesyonel terapistler ✓ Steril ortam ✓ Uygun fiyatlar",
+    "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın. ✓ Profesyonel terapistler ✓ Steril ortam ✓ Uygun fiyatlar ve Mutlu bir masaj deneyimi için.",
   keywords: [
     "isparta masaj",
     "Isparta masaj",
@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     "spa hizmetleri",
     "Isparta spa",
     "isparta spa",
+    "Isparta Masajda Mutluluğun Adresi",
+    "isparta masajda mutluluğun adresi",
   ],
   authors: [{ name: "Isparta Gül Şehri Spa & Masaj Salonu" }],
   creator: "Isparta Gül Şehri Spa & Masaj Salonu",
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     title:
       "Isparta Gül Şehri Spa & Masaj Salonu | Profesyonel Masaj Hizmetleri",
     description:
-      "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve daha fazlası için hemen randevu alın.",
+      "Isparta'nın en profesyonel masaj ve spa merkezi. Aroma terapi, klasik masaj, sıcak taş masajı ve mutlu bir masaj deneyimi için hemen randevu alın.",
     url: "https://ispartagulsehrimasaj.com",
     siteName: "Isparta Gül Şehri Spa & Masaj Salonu",
     images: [

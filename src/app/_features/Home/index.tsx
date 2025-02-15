@@ -12,7 +12,7 @@ const HomeFeature = () => {
         <div className="flex flex-row items-center justify-center">
           <Image
             className="object-cover w-full h-screen"
-            src="/images/terapi.jpg"
+            src="/images/new-terapi.jpg"
             alt="Next.js logo"
             width={1920}
             height={1080}
