@@ -59,14 +59,14 @@ export default function SpeedDialButtonComponent() {
 
         <div className="flex items-center">
           {!isOpen && (
-            <span className="flex items-center text-lg text-gray-600 mr-2 transition-opacity backdrop-blur-md rounded-full px-2.5 py-1 bg-white shadow-lg">
+            <span className="flex items-center text-lg text-gray-600 mr-2 transition-opacity backdrop-blur-md rounded-full px-2.5 py-1 bg-white shadow-lg shadow-purple-300">
               İletişim
               <span className="ml-2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-black" />
             </span>
           )}
           <motion.button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
+            className="flex justify-center items-center self-end w-16 h-16 text-gray-900 bg-white rounded-full border border-gray-300 shadow-sm shadow-purple-300 hover:bg-gray-50 focus:outline-none"
             initial={{ rotate: 0 }}
             animate={{ rotate: isOpen ? 135 : 0 }}
             transition={{ duration: 0.3 }}
@@ -97,7 +97,7 @@ function SpeedDialButton({
     <motion.div {...rest} className="flex items-center gap-3 relative">
       <span
         className={cn(
-          "text-sm text-gray-600 transition-opacity backdrop-blur-md rounded-full px-2 py-1 absolute right-14 bg-white shadow-lg",
+          "text-sm text-gray-600 transition-opacity backdrop-blur-md rounded-full px-2 py-1 absolute right-14 bg-white shadow-lg shadow-purple-300",
           {
             "opacity-100": isHover,
             "opacity-0": !isHover,
@@ -111,7 +111,7 @@ function SpeedDialButton({
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         onClick={() => href && router.push(href)}
-        className="w-12 h-12 flex justify-center items-center bg-white rounded-full border border-gray-300 shadow-sm hover:bg-gray-50"
+        className="w-12 h-12 flex justify-center items-center bg-white rounded-full border border-gray-300 shadow-sm shadow-purple-300 hover:bg-gray-50"
       >
         {icon}
       </button>
