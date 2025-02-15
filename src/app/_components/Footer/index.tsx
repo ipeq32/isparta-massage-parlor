@@ -29,7 +29,7 @@ const FooterComponent = () => {
           </Link>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Isparta'nın rahat, huzurlu ve mutlu atmosferinde, profesyonel
+              Isparta&apos;nın rahat, huzurlu ve mutlu atmosferinde, profesyonel
               masaj hizmetleri sunuyoruz.
             </p>
             {/* <p className="mt-4 text-sm text-gray-800">
