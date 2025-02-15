@@ -29,13 +29,13 @@ const FooterComponent = () => {
           </Link>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              Isparta'nın rahat, huzurlu ve mutlu atmosferinde, profesyonel
+              masaj hizmetleri sunuyoruz.
             </p>
-            <p className="mt-4 text-sm text-gray-800">
+            {/* <p className="mt-4 text-sm text-gray-800">
               Eaque ipsa quae ab illo inventore veritatis et quasi architecto
               beatae vitae dicta sunt explicabo.
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="space-y-2 text-sm">
@@ -114,17 +114,31 @@ const FooterComponent = () => {
             </Link>
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+            Bizi sosyal medya hesaplarımızdan takip edebilirsiniz.
           </p>
         </div>
       </div>
-      <div className="container flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+      <div className="container flex flex-col-reverse justify-between items-center my-10 border-t lg:flex-row">
+        <Link
+          href={"https://instagram.com/apadijital/"}
+          target="_blank"
+          className="flex flex-row items-center text-sm text-gray-600 gap-1 hover:underline"
+        >
+          <Image
+            src="/assets/apa-digital.png"
+            alt="APA Digital"
+            width={100}
+            height={20}
+            className="size-14 object-contain shadow-2xl"
+          />
+          <span className="text-[#492164e5]">APA Dijital</span>
+          tarafından geliştirilmiştir.
+        </Link>
         <p className="text-sm text-gray-600">
           © 2025 Gül Şehri Spa ve Masaj Salonu. Tüm hakkı saklıdır.
         </p>
-        <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-          {/* <li>
+        {/* <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          <li>
             <Link
               href="/gizlilik-politikasi"
               className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -139,8 +153,8 @@ const FooterComponent = () => {
             >
               Kullanım Koşulları
             </Link>
-          </li> */}
-        </ul>
+          </li>
+        </ul> */}
       </div>
     </footer>
   );

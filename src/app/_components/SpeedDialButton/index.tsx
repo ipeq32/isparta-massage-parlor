@@ -59,7 +59,7 @@ export default function SpeedDialButtonComponent() {
 
         <div className="flex items-center">
           {!isOpen && (
-            <span className="flex items-center text-lg text-gray-600 mr-2 transition-opacity backdrop-blur-md rounded-full px-2.5 py-1 bg-white shadow-lg shadow-purple-300">
+            <span className="flex items-center text-lg text-gray-600 mr-2 transition-opacity backdrop-blur-md rounded-full px-2.5 py-1 bg-white shadow-md shadow-[#6a4285e5]">
               İletişim
               <span className="ml-2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-black" />
             </span>

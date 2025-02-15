@@ -65,8 +65,10 @@ const NavbarComponent = () => {
         <Link
           href="/"
           className={cn(
-            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
+            `hover:text-violet-200 w-full text-nowrap border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
+              "text-[#3c1031]": !isScrolled,
+              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/",
             }
           )}
@@ -76,8 +78,10 @@ const NavbarComponent = () => {
         <Link
           href="/hakkimizda"
           className={cn(
-            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
+            `hover:text-violet-200 w-full text-nowrap  border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
+              "text-[#3c1031]": !isScrolled,
+              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/hakkimizda",
             }
           )}
@@ -87,8 +91,10 @@ const NavbarComponent = () => {
         <Link
           href="/iletisim"
           className={cn(
-            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
+            `hover:text-violet-200 w-full text-nowrap border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
+              "text-[#3c1031]": !isScrolled,
+              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/iletisim",
             }
           )}
@@ -98,8 +104,10 @@ const NavbarComponent = () => {
         <Link
           href="/neden-biz"
           className={cn(
-            `hover:text-violet-200 w-full text-nowrap ${isScrolled ? "text-fuchsia-200" : "text-purple-700"} border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
+            `hover:text-violet-200 w-full text-nowrap  border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
+              "text-[#3c1031]": !isScrolled,
+              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/neden-biz",
             }
           )}
@@ -126,9 +134,9 @@ const NavbarComponent = () => {
       className={cn(
         "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
         {
-          "bg-purple-700/80 h-24 shadow-xl shadow-purple-300": isScrolled,
-          "bg-purple-600": pathname === "/" && isScrolled,
-          "bg-purple-700": pathname !== "/" && isScrolled,
+          "bg-[#522f6a] h-24 shadow-xl shadow-[#6a4285e5]": isScrolled,
+          // "bg-[#522f6a]": isScrolled,
+          // "bg-purple-700": pathname !== "/" && isScrolled,
         }
       )}
     >

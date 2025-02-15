@@ -101,7 +101,7 @@ export default function ReviewsFeature() {
             {reviews?.map((review, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-between shadow-2xl shadow-purple-300 rounded-lg p-6"
+                className="flex flex-col justify-between shadow-2xl shadow-[#6a4285e5] rounded-lg p-6"
               >
                 <div className="flex items-center mb-4">
                   <Image
