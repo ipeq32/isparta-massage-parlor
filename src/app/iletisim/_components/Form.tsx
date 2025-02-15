@@ -55,7 +55,7 @@ const FormComponent = () => {
             src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Ulusoy%20Apartmanı%20Karaağaç%20Firdevs%20Cd.%20No:%208%20D:14%2032100%20Merkez%20Isparta&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             style={{ filter: "grayscale(.5) contrast(1.2) opacity(0.5)" }}
           ></iframe>
-          <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md max-sm:top-[50%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:w-4/5">
+          <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md shadow-purple-300 max-sm:top-[50%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:w-4/5">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 Adres
