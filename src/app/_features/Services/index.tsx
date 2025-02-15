@@ -63,7 +63,7 @@ export default function MassageServices() {
             servicesData.map((service, index) => (
               <div
                 key={index}
-                className="w-80 md:w-60 h-[470px] md:h-96 flex-shrink-0 bg-white rounded-lg shadow-2xl p-4"
+                className="w-80 md:w-60 h-[470px] md:h-96 flex-shrink-0 bg-white rounded-lg shadow-2xl shadow-purple-300 p-4"
               >
                 <div className="relative w-full h-[340px] md:h-60 mb-3">
                   <Image
