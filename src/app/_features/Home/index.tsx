@@ -1,6 +1,7 @@
 "use client";
 
 import { reportConversion } from "@/lib/reportConversion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 // import home from "./images/home.jpg";
@@ -9,15 +10,39 @@ const HomeFeature = () => {
   return (
     <div className="mx-auto w-full bg-slate-400">
       <div className="relative bg-slate-600">
-        <div className="flex flex-row items-center justify-center">
-          <Image
-            className="object-cover w-full h-screen"
-            src="/images/new-terapi.jpg"
-            alt="Next.js logo"
-            width={1920}
-            height={1080}
-            priority
-          />
+        <div className="flex flex-row items-center justify-center h-screen">
+          <motion.div
+            animate={{
+              opacity: [0, 1, 1, 0],
+            }}
+            transition={{
+              duration: 5,
+              times: [0, 0.2, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 0,
+            }}
+            className="absolute w-full h-screen"
+          >
+            {[1, 2, 3, 4, 5].map((index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+                className={`absolute w-full h-screen ${index === 1 ? "block" : "hidden"}`}
+              >
+                <Image
+                  className="object-cover w-full h-screen"
+                  src={`/images/${index}.jpg`}
+                  alt={`Slide ${index}`}
+                  width={1920}
+                  height={1080}
+                  priority
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
         <div className="absolute mx-auto bottom-80 right-0 left-0 text-white text-center font-bold text-3xl md:text-4xl lg:text-5xl backdrop-blur-lg w-[90%] md:w-[67%] h-auto px-2 py-3 rounded-md">
           Isparta Gül Şehri Spa & Masaj Salonu
