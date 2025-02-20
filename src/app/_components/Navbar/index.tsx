@@ -132,7 +132,7 @@ const NavbarComponent = () => {
   return (
     <nav
       className={cn(
-        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-md top-0 z-10 transition-all duration-300 ease-in-out",
+        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-3xl top-0 z-10 transition-all duration-300 ease-in-out",
         {
           "bg-[#522f6a] h-24 shadow-xl shadow-[#6a4285e5]": isScrolled,
           // "bg-[#522f6a]": isScrolled,
@@ -164,12 +164,12 @@ const NavbarComponent = () => {
         </div>
         <div className="max-lg:hidden">
           <Link href="https://api.whatsapp.com/send/?phone=905302411232&text=Randevu%20almak%20istiyorum.">
-            <button className="flex justify-between items-center gap-3 text-white font-semibold py-2 px-4 rounded hover:bg-gray-700 hover:text-green-500 transition-all duration-300 ease-linear">
+            <button className="flex justify-between items-center gap-3 text-white font-semibold py-2 px-4 rounded border border-white hover:border-none hover:bg-gray-700 hover:text-green-500 transition-all duration-300 ease-linear">
               <Icon
                 icon="logos:whatsapp-icon"
                 className="w-6 h-6 inline-block"
               />
-              <span>Randevu Al</span>
+              <span className="text-sm">+90 (530) 241 12 32</span>
             </button>
           </Link>
         </div>

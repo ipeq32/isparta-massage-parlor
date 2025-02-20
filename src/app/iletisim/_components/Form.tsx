@@ -69,7 +69,9 @@ const FormComponent = () => {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 E-Posta
               </h2>
-              <a className="text-red-500 leading-relaxed">example@email.com</a>
+              <a className="text-red-500 leading-relaxed">
+                ispartagulsehrimasaj@gmail.com
+              </a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 Telefon
               </h2>
@@ -82,7 +84,7 @@ const FormComponent = () => {
             İletişim Formu
           </h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            Rose Town Spa Ve Masaj Salonu
+            Isparta Gül Şehri Spa Ve Masaj Salonu
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">

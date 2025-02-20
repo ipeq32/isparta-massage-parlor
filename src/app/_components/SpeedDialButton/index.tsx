@@ -11,6 +11,11 @@ export default function SpeedDialButtonComponent() {
 
   const contacts = [
     {
+      label: "Whatsapp",
+      icon: <Icon icon="mdi:whatsapp" width="24" height="24" />,
+      href: "https://api.whatsapp.com/send/?phone=905302411232",
+    },
+    {
       label: "İnstagram",
       icon: <Icon icon="mdi:instagram" width="24" height="24" />,
       href: "https://www.instagram.com/ispartagulsehrimasaj",
@@ -19,11 +24,6 @@ export default function SpeedDialButtonComponent() {
       label: "Facebook",
       icon: <Icon icon="mdi:facebook" width="24" height="24" />,
       href: "https://www.facebook.com/RoseTownSpaCenter",
-    },
-    {
-      label: "Whatsapp",
-      icon: <Icon icon="mdi:whatsapp" width="24" height="24" />,
-      href: "https://api.whatsapp.com/send/?phone=905302411232",
     },
   ];
 
