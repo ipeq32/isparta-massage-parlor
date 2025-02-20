@@ -67,8 +67,6 @@ const NavbarComponent = () => {
           className={cn(
             `hover:text-violet-200 w-full text-nowrap border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-[#3c1031]": !isScrolled,
-              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/",
             }
           )}
@@ -80,8 +78,6 @@ const NavbarComponent = () => {
           className={cn(
             `hover:text-violet-200 w-full text-nowrap  border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-[#3c1031]": !isScrolled,
-              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/hakkimizda",
             }
           )}
@@ -93,8 +89,6 @@ const NavbarComponent = () => {
           className={cn(
             `hover:text-violet-200 w-full text-nowrap border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-[#3c1031]": !isScrolled,
-              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/iletisim",
             }
           )}
@@ -106,8 +100,6 @@ const NavbarComponent = () => {
           className={cn(
             `hover:text-violet-200 w-full text-nowrap  border-b border-b-transparent hover:border-b-purple-200 h-full pt-9 px-3 text-center`,
             {
-              "text-[#3c1031]": !isScrolled,
-              "text-fuchsia-200": isScrolled,
               "text-violet-200 border-b-purple-200": pathname === "/neden-biz",
             }
           )}
@@ -132,7 +124,7 @@ const NavbarComponent = () => {
   return (
     <nav
       className={cn(
-        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-3xl top-0 z-10 transition-all duration-300 ease-in-out",
+        "flex items-center p-4 w-[100%] h-32 text-white fixed backdrop-blur-3xl top-0 z-10 transition-all duration-300 ease-in-out bg-[#522f6a]",
         {
           "bg-[#522f6a] h-24 shadow-xl shadow-[#6a4285e5]": isScrolled,
           // "bg-[#522f6a]": isScrolled,
