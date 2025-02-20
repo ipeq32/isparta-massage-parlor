@@ -29,15 +29,14 @@ const HomeFeature = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className={`absolute w-full h-screen ${index === 1 ? "block" : "hidden"}`}
+                transition={{ duration: 1, delay: index * 5 }}
+                className={`absolute w-full h-screen`}
               >
                 <Image
                   className="object-cover w-full h-screen"
                   src={`/images/${index}.jpg`}
-                  alt={`Slide ${index}`}
-                  width={1920}
-                  height={1080}
+                  alt={`Isparta masaj salonu ${index}`}
+                  fill
                   priority
                 />
               </motion.div>
