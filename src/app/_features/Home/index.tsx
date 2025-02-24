@@ -12,7 +12,7 @@ const HomeFeature = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev % 9) + 1);
+      setCurrentImage((prev) => (prev % 4) + 1);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -22,7 +22,7 @@ const HomeFeature = () => {
     <div className="mx-auto w-full bg-slate-400">
       <div className="relative bg-slate-600">
         <div className="flex flex-row items-center justify-center h-screen">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+          {[1, 2, 3, 4].map((index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0 }}
