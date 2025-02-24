@@ -36,7 +36,7 @@ const HomeFeature = () => {
             >
               <Image
                 className="object-cover w-full h-screen"
-                src={`/images/resim${index}.jpg`}
+                src={`/images/res${index}.jpg`}
                 alt={`Isparta masaj salonu ${index}`}
                 fill
                 priority={index === 1}
